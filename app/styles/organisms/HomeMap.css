@@ -1,0 +1,74 @@
+.homeMap {
+  &__Area {
+    @apply bg-secundary text-center py-[5.1rem];
+    &-title {
+      h2 {
+        @apply text-white text-[2.4rem] font-[600];
+        &::before {
+          background: linear-gradient(90deg, #509415 50%, #fff 50%);
+        }
+      }
+    }
+    & > img {
+      @apply w-[3rem] mx-auto mt-10;
+    }
+    &-text {
+      @apply text-white w-[25.9rem] mx-auto;
+    }
+    &-list {
+      @apply text-white font-[400];
+
+      li {
+        @apply mt-3;
+      }
+    }
+  }
+
+  &__Map {
+    @apply h-[37.6rem]  w-full;
+  }
+  @screen laptop {
+    @apply relative;
+    &__Map {
+      height: calc(75.6rem * var(--scale));
+    }
+
+    &__Area {
+      @apply bg-secundary text-center absolute;
+      height: auto;
+      width: calc(47.2rem * var(--scale));
+      padding-top: calc(5rem * var(--scale));
+      padding-bottom: calc(5rem * var(--scale));
+      right: calc(20.3rem * var(--scale));
+      top: calc(9.9rem * var(--scale));
+      &-title {
+        h2 {
+          font-size: calc(3.5rem * var(--scale));
+        }
+      }
+      & > img {
+        @apply mx-auto;
+        width: calc(3rem * var(--scale));
+        margin-top: calc(1rem * var(--scale));
+        margin-top: calc(1rem * var(--scale));
+      }
+      &-text {
+        font-size: calc(1.8rem * var(--scale));
+        padding-top: calc(0.5rem * var(--scale));
+        line-height: 180%;
+      }
+      &-list {
+        @apply text-white font-[400];
+        font-size: calc(1.9rem * var(--scale));
+        height: calc(26rem * var(--scale));
+        margin-top: calc(1rem * var(--scale));
+        ul {
+          @apply mt-0 mx-auto flex flex-col h-full justify-around;
+          li {
+            @apply mt-0;
+          }
+        }
+      }
+    }
+  }
+}

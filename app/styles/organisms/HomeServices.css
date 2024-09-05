@@ -1,0 +1,20 @@
+.homeServices {
+  @apply pt-[4rem] pb-[4rem] relative;
+  z-index: 10;
+
+  &__container {
+    @apply flex flex-wrap gap-10;
+  }
+
+  @screen laptop {
+    background-image: url("/images/bg-service.jpg");
+    background-size: cover;
+    padding-top: calc(2rem * var(--scale));
+    padding-bottom: calc(15rem * var(--scale));
+    &__container {
+      @apply grid grid-cols-2  mx-auto w-[83%];
+      gap: calc(2rem * var(--scale));
+      margin-top: calc(10rem * var(--scale));
+    }
+  }
+}

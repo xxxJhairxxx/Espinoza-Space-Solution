@@ -1,0 +1,252 @@
+.Blog {
+  @apply pt-40 pb-20  relative;
+
+  &-title {
+    @apply my-5;
+  }
+
+  &_ctn {
+    @apply py-5 flex justify-center flex-wrap gap-10;
+  }
+
+  @screen laptop {
+    @apply relative;
+    padding-top: calc(10rem * var(--scale));
+    padding-bottom: calc(10rem * var(--scale));
+    height: auto;
+
+    &_ctn {
+      @apply flex-wrap justify-start;
+      padding-top: 8rem;
+      z-index: 50;
+      padding-left: calc(10rem * var(--scale));
+      column-gap: 0;
+      row-gap: 10;
+    }
+    &-title {
+      z-index: 50;
+      h2 {
+        @apply w-[48%];
+        &:before {
+          @apply max-w-[8%];
+        }
+      }
+    }
+  }
+}
+
+/********************* SECTION DE BLOGPOST *******************/
+
+.BlogPost {
+  @apply px-0 py-14;
+  &__main {
+    @apply mx-0;
+
+    &__thumb {
+      @apply relative  px-10 overflow-hidden;
+      img {
+        @apply rounded-xl;
+      }
+    }
+    &__contain {
+      @apply py-10 px-10;
+      &_date {
+        @apply relative;
+        margin-left: 3rem;
+        font-size: 1.5rem;
+        &::before {
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 0.8rem;
+          left: calc(-3rem * var(--scale));
+          transform: translateY(-50%);
+          position: absolute;
+          background-image: url("/images/icon-schedule.png");
+        }
+      }
+      h3 > strong {
+        @apply text-[3rem] mt-5 block font-bold font-primary leading-[3.5rem];
+      }
+      &__text {
+        @apply border-b pb-20;
+        p {
+          @apply leading-relaxed mt-8 text-gris-200 font-[300];
+        }
+      }
+    }
+  }
+
+  .breadCumbMenu {
+    @apply mt-28 not-italic ml-10 w-fit;
+  }
+
+  &__cards {
+    @apply bg-white  flex justify-center flex-wrap gap-10;
+
+    &__title {
+      @apply w-[70%] mb-5;
+    }
+
+    &__card {
+      @apply border;
+    }
+  }
+  @screen tablet {
+    @apply px-0 py-14;
+    &__main {
+      &__thumb {
+        &::before {
+          font-size: 120%;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @screen tabletxl {
+    &__cards {
+      @apply w-[full] pl-[3%] border-l-2 grid grid-cols-2;
+      &__title {
+        @apply w-full text-center mb-20 col-span-2;
+      }
+
+      &__card {
+        @apply mx-0 w-full max-w-[40rem] border mb-5;
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply flex flex-wrap pt-40 pb-20 font-primary font-[300];
+    padding-top: calc(8rem * var(--scale));
+    .breadCumbMenu {
+      @apply mr-auto w-fit not-italic;
+      margin-top: calc(0rem * var(--scale));
+      margin-left: calc(6rem * var(--scale));
+      li {
+        font-size: calc(1.7rem * var(--scale));
+      }
+    }
+
+    &__main {
+      @apply w-[68%] pr-[3%];
+
+      &__thumb {
+        @apply relative rounded-3xl overflow-hidden;
+        height: calc(60rem * var(--scale));
+        img {
+          @apply w-full h-full object-cover;
+        }
+        &::before {
+          @apply p-[0.5%] rounded-tr-2xl;
+          width: 12%;
+          font-size: calc(2.456rem * var(--scale));
+        }
+      }
+
+      &__contain {
+        @apply p-0;
+
+        padding-bottom: calc(5rem * var(--scale));
+        padding-top: calc(5rem * var(--scale));
+
+        & > h3 {
+          @apply text-[3rem];
+        }
+
+        &__text {
+          @apply border-none p-0;
+          strong {
+            font-weight: bold;
+          }
+
+          p {
+            @apply leading-relaxed mt-8 text-gris-200 font-[300];
+          }
+        }
+      }
+    }
+
+    /* cuando halla un solo elemento */
+
+    &__main_one {
+      @apply w-[95%] p-0;
+      margin-top: calc(2rem * var(--scale));
+      .BlogPost__main__thumb {
+        padding: 0;
+        width: 100%;
+        @apply relative;
+        img {
+          @apply object-cover;
+          width: 100%;
+        }
+        &::before {
+          content: "";
+          display: none;
+        }
+      }
+
+      .BlogPost__main__contain {
+        @apply py-0 px-0;
+        padding-bottom: calc(5rem * var(--scale));
+        padding-top: calc(5rem * var(--scale));
+        &_date {
+          @apply relative block !not-italic;
+          margin-left: calc(4.5rem * var(--scale));
+          font-size: calc(1.9rem * var(--scale));
+          &::before {
+            content: "";
+            width: 2.3rem;
+            height: 2.3rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 45%;
+            left: calc(-3rem * var(--scale));
+            transform: translateY(-50%);
+            position: absolute;
+            background-image: url("/images/icon-schedule.png");
+          }
+        }
+        &_title > strong {
+          font-weight: 800;
+          font-size: calc(2.6rem * var(--scale));
+          margin-left: calc(1.5rem * var(--scale));
+          margin-top: calc(1.5rem * var(--scale));
+          margin-bottom: calc(2.8rem * var(--scale));
+        }
+
+        &__text {
+          @apply border-none p-0  mt-8;
+          columns: 2;
+          column-gap: 10rem;
+          row-gap: 3rem;
+          font-size: calc(1.9rem * var(--scale));
+          strong {
+            font-weight: bold;
+          }
+
+          p {
+            @apply leading-relaxed  mt-0 mb-5 text-gris-200 font-[300];
+            strong {
+              @apply block mt-5;
+            }
+          }
+        }
+      }
+    }
+
+    &__cards {
+      @apply w-[32%] pl-[3%] border-l-2 block;
+      &__title {
+        @apply hidden;
+      }
+
+      &__card {
+        @apply mx-0 w-full max-w-[40rem] border mb-5;
+      }
+    }
+  }
+}

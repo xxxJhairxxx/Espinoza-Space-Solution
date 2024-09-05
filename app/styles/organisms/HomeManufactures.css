@@ -1,0 +1,72 @@
+.homeManufactures {
+  @apply bg-secundary h-[26.8rem] relative pt-[4rem] pb-[10rem];
+
+  &__title {
+    h2 {
+      @apply text-white;
+      &::before {
+        background: linear-gradient(90deg, #509415 50%, #fff 50%);
+      }
+    }
+  }
+
+  &__swiper {
+    @apply w-[90%] mx-auto mt-[4.5rem];
+    .swiper-wrapper {
+      @apply ml-5 flex items-center;
+      img {
+        @apply w-full h-full;
+      }
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/bg-bottom-manufactures.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    bottom: -1.1rem;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 50;
+  }
+  @screen tablet {
+    &:before {
+      display: none;
+    }
+  }
+
+  @screen laptop {
+    @apply bg-secundary  relative;
+    padding-top: calc(10rem * var(--scale));
+    padding-bottom: calc(15rem * var(--scale));
+    height: calc(41.2rem * var(--scale));
+    &__swiper {
+      @apply w-[70%] mx-auto flex items-center  mt-[4.5rem];
+      margin-top: calc(8rem * var(--scale));
+      .swiper-wrapper {
+        @apply ml-5 flex items-center;
+        height: calc(4rem * var(--scale));
+        img {
+          @apply w-full h-full object-contain;
+        }
+      }
+    }
+
+    /* &:before {
+      display: block;
+      background-image: url("/images/bg-bottom-manufactures2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top left;
+      bottom: calc(-0.25rem * var(--scale));
+      left: 0;
+      width: 100%;
+      height: calc(15rem * var(--scale));
+      z-index: 50;
+    } */
+  }
+}

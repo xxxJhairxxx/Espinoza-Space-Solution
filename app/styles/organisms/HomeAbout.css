@@ -1,0 +1,84 @@
+.homeAbout {
+  @apply bg-white pt-[5rem] pb-[4rem];
+
+  &__thumb {
+    @apply hidden;
+  }
+  &__description {
+    @apply w-[90%] text-[1.5rem] mx-auto text-center;
+    line-height: 167%;
+    font-weight: 300;
+
+    &-btn {
+      @apply mt-5 mx-auto;
+    }
+  }
+
+  @screen tablet {
+    @apply mt-[-1rem];
+  }
+
+  @screen laptop {
+    @apply flex;
+    padding: calc(7.7rem * var(--scale)) calc(27rem * var(--scale));
+    &__thumb {
+      @apply flex relative;
+      width: calc(66.8rem * var(--scale));
+      height: calc(40rem * var(--scale));
+      padding: calc(2rem * var(--scale));
+      z-index: 10;
+      &-image_big {
+        @apply mb-auto mr-auto  rounded-xl overflow-hidden;
+        width: calc(35.3rem * var(--scale));
+        height: calc(31.6rem * var(--scale));
+        & > img {
+          @apply h-full w-full object-cover;
+        }
+      }
+      &-image_small {
+        @apply ml-auto mt-auto rounded-xl overflow-hidden;
+        width: calc(22.5rem * var(--scale));
+        height: calc(16.9rem * var(--scale));
+        & > img {
+          @apply h-full w-full object-cover;
+        }
+      }
+
+      &:before {
+        @apply bg-secundary;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        clip-path: polygon(50% 0, 90% 0, 60% 100%, 20% 100%);
+      }
+    }
+    &__description {
+      @apply text-[1.5rem] mx-auto;
+      width: calc(52rem * var(--scale));
+      line-height: 167%;
+      font-weight: 300;
+      &__title {
+        @apply text-left;
+        h2 {
+          &:before {
+            @apply text-left left-0 translate-x-[0];
+          }
+        }
+      }
+
+      &__text {
+        @apply text-left text-gris-200;
+        font-size: calc(1.9rem * var(--scale));
+        line-height: 167%;
+      }
+
+      &-btn {
+        @apply hidden;
+      }
+    }
+  }
+}

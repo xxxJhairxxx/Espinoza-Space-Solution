@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_section_home_maps",
+  "info": {
+    "displayName": "home_map",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "cities": {
+      "type": "richtext"
+    }
+  }
+}

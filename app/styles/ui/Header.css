@@ -1,0 +1,93 @@
+.Header {
+  @apply h-[5.9rem] w-[88%] pl-4 flex items-center fixed bg-white rounded-xl;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2%;
+  z-index: 400;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  &-Logo {
+    @media screen(laptop) {
+      z-index: 2;
+      @apply absolute left-0;
+      height: calc(10.5rem * var(--scale));
+      left: calc(25.5rem * var(--scale));
+      top: calc(-1rem * var(--scale));
+    }
+  }
+  &-phone {
+    @apply h-[60%] w-[13.8rem] !text-white right-24 px-3 bg-secundary font-primary text-[1.3rem] font-[400] absolute flex items-center  gap-1 rounded-l-full rounded-r-full;
+    z-index: 2;
+
+    &-thumb {
+      @apply bg-white w-[2.5rem] h-[2.5rem] mr-1  rounded-full flex items-center justify-center;
+      img {
+        @apply w-[50%] h-[50%] object-contain;
+      }
+    }
+
+    @media screen(laptop) {
+      @apply hidden;
+    }
+  }
+
+  &-menuIcon {
+    @apply absolute z-[110];
+    right: 0;
+    @media screen(laptop) {
+      @apply hidden;
+    }
+  }
+  &-ctn {
+    @apply h-full w-full mx-auto;
+  }
+
+  &.background-white {
+    @screen laptop {
+      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+  &.background-transparent {
+    @apply text-white;
+    @media screen(laptop) {
+      @apply bg-transparent;
+
+      .Navbar-li {
+        @apply text-black;
+      }
+    }
+  }
+
+  &-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @apply fixed inset-0 w-[120%] left-[-10%] top-[-40%] bg-black/40 pointer-events-none h-screen;
+    z-index: -1;
+    @media screen(laptop) {
+      @apply hidden;
+    }
+
+    &.isActive {
+      opacity: 1;
+      @apply pointer-events-auto;
+    }
+  }
+
+  /**=======LAPTOP===============**/
+
+  @screen laptop {
+    @apply bg-white flex items-center !sticky rounded-none;
+    transition: background-color 0.25s ease;
+    box-shadow: none;
+    height: calc(9.4rem * var(--scale));
+    left: 0;
+    transform: translateX(0);
+    top: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: calc(5rem * var(--scale));
+    &-ctn {
+      height: auto;
+    }
+  }
+}

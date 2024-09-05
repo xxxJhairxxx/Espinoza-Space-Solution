@@ -1,0 +1,80 @@
+.menu-icon {
+  @apply h-full rounded-r-xl;
+  --menu-size: 5.8rem;
+  &.hamburguer {
+    height: 5.9rem;
+    width: 4.8rem;
+    transition: background-color 0.4s ease;
+    @apply bg-primary flex justify-center items-center cursor-pointer;
+    @screen laptoplg {
+      @apply hidden;
+    }
+
+    .span {
+      height: 0.27rem;
+      width: 2.5rem;
+      transition: transform 0.4s ease;
+      @apply bg-white inline-block absolute mx-auto;
+    }
+    .span:nth-child(1) {
+      transform: translateY(-0.8rem);
+    }
+    .span:nth-child(3) {
+      transform: translateY(0.8rem);
+    }
+    /* Animacion cuando "isActive" es true */
+    &.change {
+      height: 3.7rem;
+      @apply bg-transparent;
+      &::before {
+        content: "";
+        @apply w-[3.5rem] h-[3.5rem] rounded-full;
+        border: 2px solid white;
+      }
+      .span {
+        width: 1.8rem;
+      }
+      .span:nth-child(1) {
+        transform: rotateZ(42.19deg);
+        @apply bg-white;
+      }
+
+      .span:nth-child(2) {
+        @apply opacity-0;
+      }
+
+      .span:nth-child(3) {
+        transform: rotateZ(-42.19deg);
+        @apply bg-white;
+      }
+    }
+  }
+
+  &.close {
+    width: var(--menu-size);
+    height: var(--menu-size);
+
+    @apply bg-transparent relative cursor-pointer flex justify-center items-center;
+    @screen laptop {
+      @apply hidden;
+    }
+    .span {
+      width: 2.5rem;
+      height: 0.25rem;
+      border-radius: 2px;
+      @apply bg-white inline-block absolute;
+    }
+
+    .span:nth-child(1) {
+      transform: rotateZ(42.19deg);
+    }
+
+    .span:nth-child(2) {
+      @apply hidden;
+    }
+
+    .span:nth-child(3) {
+      transform: rotateZ(-42.19deg);
+    }
+  }
+}

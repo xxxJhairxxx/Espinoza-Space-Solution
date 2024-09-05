@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_section_home_we_dos",
+  "info": {
+    "displayName": "home_we_do",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

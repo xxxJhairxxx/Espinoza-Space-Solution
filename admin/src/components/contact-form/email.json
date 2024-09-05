@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contact_form_emails",
+  "info": {
+    "displayName": "email"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.enlace {
+  @apply rounded-[0.5rem] relative block mx-[100%] mt-10 bg-primary font-[500] px-[2.5rem] py-[1rem]  cursor-pointer justify-center text-white;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-transform: capitalize;
+  z-index: 100;
+
+  &:hover {
+    @apply text-white bg-success;
+  }
+  @screen laptop {
+    @apply w-fit h-full;
+    margin-top: calc(5rem * var(--scale));
+    border-radius: calc(0.5rem * var(--scale));
+    font-size: calc(1.9rem * var(--scale));
+    padding: calc(1.5rem * var(--scale)) calc(3rem * var(--scale));
+  }
+}

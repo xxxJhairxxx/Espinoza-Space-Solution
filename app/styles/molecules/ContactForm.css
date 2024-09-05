@@ -1,0 +1,153 @@
+.contactFormCont {
+  &__InputArea {
+    @apply bg-opacity-100 gap-5 flex flex-wrap justify-between;
+    @screen laptop {
+      @apply mix-blend-normal;
+      column-gap: 1rem;
+      row-gap: 1.5rem;
+      isolation: auto;
+    }
+    &__item {
+      @apply w-full grid gap-3;
+
+      @screen laptop {
+        @apply w-[48.5%] grid;
+      }
+
+      label {
+        font-size: calc(1.8rem * var(--scale));
+      }
+      input {
+        @apply w-full bg-white  rounded-xl;
+
+        height: 4.1rem;
+        color: #606060;
+        border: solid 1px #bcbcbc;
+        &::placeholder {
+          color: #606060;
+        }
+        padding-left: 1.6rem;
+        @media screen(laptop) {
+          @apply bg-white relative;
+          height: calc(5.6rem * var(--scale));
+          font-size: calc(1.8rem * var(--scale));
+          color: #606060;
+        }
+      }
+
+      select {
+        border-radius: 5px;
+        height: 4.1rem;
+        background: fffs;
+        color: #787878;
+        appearance: none;
+        padding-left: 1.6rem;
+        width: 100%;
+        border: solid 1px #bcbcbc;
+
+        z-index: 5;
+        @media screen(laptop) {
+          height: calc(6rem * var(--scale));
+          font-size: calc(1.8rem * var(--scale));
+        }
+        & option {
+          @apply not-italic;
+          font-size: calc(1.7rem * var(--scale));
+        }
+      }
+      .select-service {
+        @apply relative w-full;
+        &::before {
+          content: "\e909";
+          font-family: "icomoon";
+          position: absolute;
+          right: 1rem;
+          font-size: 0.75rem;
+          top: 1.5rem;
+          color: #606060;
+        }
+        @screen laptop {
+          font-size: calc(1.7rem * var(--scale));
+          &::before {
+            content: "\e909";
+            font-family: "icomoon";
+            position: absolute;
+            right: calc(1.5rem * var(--scale));
+            font-size: calc(0.75rem * var(--scale));
+            top: calc(2.5rem * var(--scale));
+            color: #606060;
+          }
+        }
+        z-index: 1;
+      }
+    }
+  }
+
+  &__TextArea {
+    @apply mt-3;
+    label {
+      font-size: calc(1.8rem * var(--scale));
+    }
+    textarea {
+      height: 14.2rem;
+      color: #787878;
+      width: 100%;
+      border-radius: 5px;
+      padding: 1rem;
+      margin-top: 10px;
+      resize: none;
+      border: solid 1px #bcbcbc;
+      &::placeholder {
+        color: #606060;
+      }
+      @media screen(laptop) {
+        background: #fff !;
+        height: calc(13.8rem * var(--scale));
+        padding-left: calc(1.6rem * var(--scale));
+        font-size: calc(1.8rem * var(--scale));
+        margin-top: 0;
+      }
+    }
+
+    @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+      margin-top: calc(1.5rem * var(--scale));
+    }
+  }
+
+  @screen laptop {
+    @apply bg-[#EEEEEE] rounded-3xl bg-blend-multiply;
+    background-image: url("/images/bg-texture-gris.png");
+    padding: calc(5rem * var(--scale));
+    width: calc(79.7rem * var(--scale));
+  }
+}
+
+.Form-error {
+  @apply text-[1.2rem] text-red-500;
+}
+
+.ButtonArea {
+  @apply grid grid-cols-2 gap-20;
+  margin-top: calc(2rem * var(--scale));
+  width: calc(20rem * var(--scale));
+  @screen laptop {
+    @apply justify-center;
+    &_send {
+      @apply bg-primary text-white;
+    }
+  }
+}
+
+.breadCumbMenu {
+  @apply mt-10 not-italic;
+  @screen laptop {
+    @apply !hidden;
+  }
+}
+.init {
+  color: green;
+}
+.failure {
+  color: #ff7490;
+}

@@ -1,0 +1,49 @@
+.BreadCumbs {
+  @apply mb-[2rem]  font-primary flex w-full italic;
+
+  &-list {
+    @apply flex gap-x-[0.5rem] z-10;
+
+    & li:last-child {
+      @apply font-semibold;
+    }
+  }
+
+  &-li {
+    @apply text-[1.4rem] leading-[1.2] z-10 font-[300];
+
+    &::after {
+      @apply ml-[.7rem];
+      content: "/";
+    }
+    &:last-child {
+      @apply pointer-events-none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply font-[300];
+
+    &-list {
+      @apply flex gap-x-[0.5rem] z-10 ml-0;
+
+      li {
+        @apply leading-[1.2] z-10;
+        font-size: calc(1.7rem * var(--scale)) !important;
+      }
+      & li:last-child {
+        @apply font-semibold;
+      }
+    }
+  }
+}
+
+.nopointer {
+  cursor: default;
+}

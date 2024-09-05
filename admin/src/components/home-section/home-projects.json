@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_home_section_home_projects",
+  "info": {
+    "displayName": "home_projects",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "bg_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "images": {
+      "displayName": "image",
+      "type": "component",
+      "repeatable": true,
+      "component": "image.image"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.contact {
+  @apply relative  flex px-[3rem] flex-wrap items-center;
+  padding-top: 8rem;
+  padding-bottom: 7rem;
+  &__ctn_text {
+    @apply text-gris-200;
+    z-index: 20;
+    &__title {
+      &_first {
+        @apply mx-0;
+      }
+      h3 {
+        @apply text-left mb-3;
+        font-size: 1.4rem;
+      }
+      h2 {
+        @apply text-left;
+        @apply font-[700] text-black;
+        font-size: 2.5rem;
+        &::before {
+          left: 0;
+          transform: translateX(0%);
+        }
+      }
+      & > p {
+        @apply text-[1.5rem] leading-[3rem] font-primary font-[300];
+      }
+    }
+  }
+
+  @screen laptop {
+    background-image: url("/images/bg-texture-gris.jpg");
+    @apply flex items-start justify-between;
+
+    margin-top: calc(-4rem * var(--scale));
+    padding: calc(15rem * var(--scale)) calc(21.5rem * var(--scale));
+    padding-bottom: calc(10.25rem * var(--scale));
+    &__ctn_text {
+      @apply text-gris-200;
+      width: calc(44.3rem * var(--scale));
+      padding-top: calc(1.5rem * var(--scale));
+      z-index: 100;
+      &__title {
+        @apply text-left;
+        h3 {
+          @apply text-left uppercase;
+          font-size: calc(1.86rem * var(--scale));
+        }
+        h2 {
+          @apply text-left;
+          @apply font-[600] text-black;
+          font-size: calc(3.321rem * var(--scale));
+
+          &::before {
+            left: 0;
+            transform: translateX(0%);
+          }
+        }
+        p {
+          margin-top: calc(5rem * var(--scale));
+          margin-bottom: calc(3rem * var(--scale));
+          font-size: calc(1.8rem * var(--scale));
+
+          line-height: 180%;
+        }
+      }
+    }
+  }
+}

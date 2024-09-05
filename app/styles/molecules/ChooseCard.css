@@ -1,0 +1,56 @@
+.chooseCards {
+  @apply bg-[#DEE3E5] flex flex-col items-center text-center rounded-3xl py-[4rem] px-[3rem] min-h-[40rem];
+  width: 100%;
+  &__thumb {
+    @apply flex items-center mb-[3rem] justify-center bg-secundary w-[6.7rem] h-[6.7rem] rounded-xl;
+    img {
+      @apply w-[4rem];
+    }
+  }
+  &__description {
+    &-title {
+      @apply text-[1.8rem] font-[700] mb-4;
+    }
+    &-text {
+      @apply text-[1.7rem];
+      font-style: normal;
+      font-weight: 300;
+      line-height: 167%;
+    }
+  }
+
+  @screen laptop {
+    @apply flex-row items-start text-center rounded-3xl min-h-[1%];
+    width: calc(55rem * var(--scale));
+    padding: calc(2.67rem * var(--scale)) calc(2.09rem * var(--scale));
+    gap: calc(2rem * var(--scale));
+    margin-bottom: calc(1.8rem * var(--scale));
+    &__thumb {
+      @apply flex items-center mb-[3rem] justify-center bg-secundary w-[6.7rem] h-[6.7rem] rounded-xl;
+      width: calc(7.5rem * var(--scale));
+      height: calc(7.9rem * var(--scale));
+      img {
+        @apply object-contain;
+        width: 50%;
+        height: 50%;
+      }
+    }
+    &__description {
+      width: calc(42rem * var(--scale));
+      &-title {
+        @apply text-[1.8rem] text-left lowercase mb-4;
+        font-size: calc(2.05rem * var(--scale));
+        &::first-letter {
+          @apply uppercase;
+        }
+      }
+      &-text {
+        @apply text-left;
+        font-style: normal;
+        font-size: calc(1.7rem * var(--scale));
+        font-weight: 300;
+        line-height: 167%;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.contactCards {
+  @apply hidden;
+
+  @screen laptop {
+    @apply flex;
+    gap: calc(2.5rem * var(--scale));
+    height: calc(6.7rem * var(--scale));
+    margin-top: calc(2rem * var(--scale));
+    &__thumb {
+      @apply flex items-center justify-center bg-secundary rounded-xl;
+      height: calc(6rem * var(--scale));
+      width: calc(6rem * var(--scale));
+      img {
+        @apply w-[35%];
+      }
+    }
+    &__description {
+      font-size: calc(1.8rem * var(--scale));
+      h2 {
+        @apply font-[500];
+      }
+      p {
+        margin-top: calc(0.8rem * var(--scale));
+      }
+    }
+  }
+}

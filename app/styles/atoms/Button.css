@@ -1,0 +1,15 @@
+.Btn {
+  @apply rounded-[0.4rem]  text-[1.5rem] block bg-primary font-[600] px-[2.4rem] py-[1.2rem]  cursor-pointer justify-center text-white;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: fit-content;
+  &:hover {
+    @apply text-white bg-success;
+  }
+
+  @screen laptop {
+    @apply bg-white text-primary font-[600] font-secundary;
+    font-size: calc(1.9rem * var(--scale));
+    padding: calc(1.2rem * var(--scale)) calc(3rem * var(--scale));
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contact_form_messages",
+  "info": {
+    "displayName": "message"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

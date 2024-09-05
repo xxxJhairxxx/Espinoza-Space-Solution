@@ -1,0 +1,47 @@
+.infoHeader {
+  @apply hidden;
+
+  @screen laptop {
+    @apply block  top-0 left-0 absolute  w-full mx-auto;
+    z-index: 100;
+
+    height: calc(18rem * var(--scale));
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 22%,
+      rgba(255, 252, 0, 0) 100%
+    );
+
+    .infoHeader-container {
+      @apply flex justify-end text-white items-center font-primary;
+      gap: calc(4rem * var(--scale));
+      width: calc(148rem * var(--scale));
+      height: calc(5rem * var(--scale));
+    }
+
+    &-info {
+      @apply flex justify-end items-center;
+      gap: calc(4rem * var(--scale));
+
+      li {
+        @apply font-[200];
+        font-size: calc(1.6rem * var(--scale));
+        a {
+          @apply inline-block;
+        }
+        i {
+          @apply top-[2px] inline-block relative;
+          font-size: calc(1.7rem * var(--scale));
+          margin-right: calc(1rem * var(--scale));
+        }
+      }
+    }
+  }
+  .socials-network {
+  }
+}
+
+.infoHeader_Actived {
+  background: linear-gradient(180deg, #509415 50%, #509415 50%);
+  height: calc(10.4rem * var(--scale));
+}

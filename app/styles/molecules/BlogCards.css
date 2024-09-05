@@ -1,0 +1,212 @@
+.BlogCard {
+  @apply flex flex-wrap border justify-between p-5 mx-10 bg-white rounded-xl max-w-[50rem];
+
+  &__thumb {
+    @apply relative cursor-pointer;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    z-index: 300;
+    &:before {
+      @apply rounded-3xl;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      opacity: 0;
+      background: linear-gradient(
+        180deg,
+        #509415 0%,
+        rgba(80, 148, 21, 0) 100%
+      );
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+    img {
+      z-index: 500;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__Content {
+    @apply px-5;
+    z-index: 100;
+
+    &-header {
+      @apply font-primary border-b py-3;
+      &-date {
+        @apply relative my-5;
+        margin-left: 1.9rem;
+        font-size: 1.5rem;
+        &::before {
+          content: "";
+          width: 1.5rem;
+          height: 1.5rem;
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 45%;
+          left: -1.9rem;
+          transform: translateY(-50%);
+          position: absolute;
+          background-image: url("/images/icon-schedule.png");
+        }
+      }
+      &-title {
+        @apply font-[700] text-black leading-snug;
+        font-size: 1.8rem;
+        line-height: normal;
+      }
+      &-text {
+        @apply hidden;
+      }
+    }
+    &-footer {
+      padding: calc(1rem * var(--scale)) 0;
+      &-btn {
+        @apply font-primary text-primary font-[400] relative mt-3;
+        display: inline-block;
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        font-size: 1.5rem;
+        &::after {
+          content: "";
+          width: 1.2rem;
+          height: 1.3rem;
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 45%;
+          margin-left: calc(0.5rem * var(--scale));
+          transform: translateY(-50%);
+
+          position: absolute;
+          background-image: url("/images/icon-arrow.png");
+        }
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply max-w-[45rem] w-[27%];
+    &__thumb {
+      @apply relative cursor-pointer;
+      width: 100%;
+      height: calc(20rem * var(--scale));
+    }
+
+    &__Content {
+      @apply px-5;
+      z-index: 100;
+
+      &-header {
+        @apply font-primary border-b py-3;
+        &-date {
+          @apply relative my-5;
+          margin-left: calc(1.9rem * var(--scale));
+          font-size: calc(1.5rem * var(--scale));
+          &::before {
+            width: calc(1.5rem * var(--scale));
+            height: calc(1.5rem * var(--scale));
+            left: calc(-1.9rem * var(--scale));
+          }
+        }
+        &-title {
+          font-size: calc(1.8rem * var(--scale));
+        }
+        &-text {
+          @apply block my-3;
+          font-size: calc(1.6rem * var(--scale));
+        }
+      }
+      &-footer {
+        padding: calc(1rem * var(--scale)) 0;
+        &-btn {
+          @apply font-primary text-primary font-[400] relative mt-3;
+
+          font-size: calc(1.5rem * var(--scale));
+          &::after {
+            content: "";
+            width: calc(1.2rem * var(--scale));
+            height: calc(1.3rem * var(--scale));
+          }
+        }
+      }
+    }
+  }
+}
+/* @apply w-full max-w-[35rem] cursor-pointer;
+
+  &__thumb {
+    @apply relative overflow-hidden rounded-t-xl;
+    img {
+      transition: all 0.4s ease;
+    }
+    &:hover {
+      @apply bg-secundary;
+    }
+    &:hover > img {
+      @apply opacity-75;
+      scale: 115%;
+    }
+
+    &::before {
+      @apply bg-primary px-8 py-1 text-white rounded-tr-xl;
+      content: "TIPS";
+      position: absolute;
+      width: fit-content;
+      height: fit-content;
+      font-weight: 500;
+      font-size: cal(2rem * var(--scale));
+      z-index: 50;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__Content {
+    @apply bg-white font-primary border pl-14 pb-9 pt-5 pr-28 rounded-bl-xl rounded-br-[3rem];
+    h1 {
+      @apply font-primary text-black font-bold text-[1.66rem] leading-9 my-3;
+    }
+
+    p {
+      @apply font-[300];
+    }
+  }
+}
+
+@screen laptop {
+  .BlogCard {
+    @apply w-full max-w-[45rem];
+    height: calc(22rem * var(--scale));
+    z-index: 250;
+    &__thumb {
+      @apply relative overflow-hidden rounded-t-xl;
+      height: calc(26rem * var(--scale));
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__Content {
+      @apply pb-14 pt-5 pr-28 rounded-br-[5rem] h-full;
+
+      h1 {
+        @apply leading-[3rem];
+        font-size: calc(2.4rem * var(--scale));
+      }
+      p {
+        font-size: calc(1.9rem * var(--scale));
+      }
+    }
+  } */

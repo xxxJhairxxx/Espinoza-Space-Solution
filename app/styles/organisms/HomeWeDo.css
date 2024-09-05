@@ -1,0 +1,120 @@
+.homeWeDo {
+  @apply px-10  w-full pb-16;
+
+  z-index: 30;
+
+  &__thumb {
+    @apply hidden;
+  }
+
+  &__text {
+    @apply text-[1.35rem];
+    p {
+      @apply text-black;
+    }
+    strong {
+      @apply font-[300] block mt-4;
+    }
+    ul {
+      @apply mt-3 mb-5;
+      li {
+        @apply pl-9 leading-[165%] relative;
+        &::before {
+          content: "";
+          height: 1.5rem;
+          width: 1.5rem;
+          background-image: url("/images/icon-list.png");
+          background-size: contain;
+          position: absolute;
+          left: 0rem;
+        }
+      }
+    }
+  }
+  &__btn {
+    @apply mt-6 bg-primary text-white;
+  }
+
+  @screen laptop {
+    @apply columns-2;
+    gap: calc(12rem * var(--scale));
+    padding: calc(3rem * var(--scale)) calc(21.5rem * var(--scale));
+    padding-bottom: calc(8rem * var(--scale));
+    z-index: 30;
+
+    &-title {
+      @apply text-left max-w-full w-full;
+      h2 {
+        @apply w-full max-w-[120rem];
+        &::before {
+          left: 0;
+          transform: translateX(0);
+          z-index: 200;
+        }
+      }
+    }
+
+    &__thumb {
+      @apply flex items-center relative;
+      width: calc(63rem * var(--scale));
+      height: calc(44rem * var(--scale));
+      margin: calc(6.5rem * var(--scale)) 0;
+      z-index: 4;
+
+      &:before {
+        @apply bg-primary;
+        z-index: -2;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        clip-path: polygon(0 0, 56% 0, 100% 100%, 44% 100%);
+      }
+
+      &__Image {
+        @apply w-full;
+        height: calc(38rem * var(--scale));
+        img {
+          @apply w-full h-full object-cover;
+
+          z-index: 20;
+        }
+      }
+    }
+
+    &__text {
+      font-size: calc(1.8rem * var(--scale));
+      line-height: calc(3.24rem * var(--scale));
+      p {
+        @apply text-[#606060];
+      }
+      strong {
+        @apply font-[400] block mt-4;
+        margin-top: calc(0.5rem * var(--scale));
+      }
+      ul {
+        font-size: calc(1.8rem * var(--scale));
+        margin-top: calc(1.5rem * var(--scale));
+        margin-bottom: calc(1rem * var(--scale));
+        li {
+          @apply relative;
+          font-size: calc(1.8rem * var(--scale));
+          padding-bottom: calc(0.8rem * var(--scale));
+          padding-left: calc(3rem * var(--scale));
+          &::before {
+            content: "";
+            height: calc(2.2rem * var(--scale));
+            width: calc(2.2rem * var(--scale));
+            left: 0rem;
+            line-height: 195%;
+          }
+        }
+      }
+    }
+    &__btn {
+      margin-top: calc(2.2rem * var(--scale));
+      font-size: calc(1.8rem * var(--scale));
+      padding: calc(1.5rem * var(--scale)) calc(3rem * var(--scale));
+    }
+  }
+}

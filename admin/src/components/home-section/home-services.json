@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_section_home_services",
+  "info": {
+    "displayName": "home_services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "service_card": {
+      "displayName": "service_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "cards-section.service-card"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_section_home_manufactures",
+  "info": {
+    "displayName": "home_manufactures",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

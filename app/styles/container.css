@@ -1,0 +1,11 @@
+/*ARCHIVO CREADO Y COPIADO*/
+.container-general {
+  @apply px-0;
+  @media screen(tabletxl) {
+    @apply p-0 w-[92.2%] mx-auto;
+    max-width: 160rem;
+  }
+  @media screen(laptop) {
+    @apply w-[82%];
+  }
+}

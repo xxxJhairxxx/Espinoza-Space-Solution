@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cards_section_middle_cards",
+  "info": {
+    "displayName": "middle_card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

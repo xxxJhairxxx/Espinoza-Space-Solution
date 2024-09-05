@@ -1,0 +1,119 @@
+.BlogCardOne {
+  @screen laptop {
+    @apply flex justify-between bg-white rounded-3xl cursor-pointer;
+
+    width: calc(110rem * var(--scale));
+    height: calc(41.5rem * var(--scale));
+    padding: calc(3rem * var(--scale));
+    padding-right: calc(3rem * var(--scale));
+    &:hover {
+      box-shadow: 0px 4px 50px 0px rgba(65, 125, 220, 0.15);
+
+      .BlogCardOne__Content-footer-btn {
+        &:after {
+          margin-left: 6%;
+        }
+      }
+
+      .BlogCardOne__thumb {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    &__thumb {
+      @apply relative rounded-3xl cursor-pointer;
+      width: 52%;
+      height: calc(35.5rem * var(--scale));
+      overflow: hidden;
+      z-index: 300;
+      margin-right: calc(3rem * var(--scale));
+      &:before {
+        @apply rounded-3xl;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        opacity: 0;
+        background: linear-gradient(
+          180deg,
+          #509415 0%,
+          rgba(80, 148, 21, 0) 100%
+        );
+        transition: all 0.2s ease-in-out;
+      }
+
+      img {
+        z-index: 500;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__Content {
+      width: 44.3%;
+      z-index: 100;
+      &-header {
+        @apply font-primary border-b;
+        padding: calc(1rem * var(--scale)) 0;
+        &-date {
+          @apply relative;
+          margin-left: calc(3rem * var(--scale));
+          font-size: calc(1.9rem * var(--scale));
+          &::before {
+            content: "";
+            width: calc(2.3rem * var(--scale));
+            height: calc(2.3rem * var(--scale));
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 45%;
+            left: calc(-3rem * var(--scale));
+            transform: translateY(-50%);
+            position: absolute;
+            background-image: url("/images/icon-schedule.png");
+          }
+        }
+        &-title {
+          @apply font-[700] text-black leading-snug;
+          font-size: calc(2.5rem * var(--scale));
+          margin: calc(1rem * var(--scale)) 0;
+        }
+        &-text {
+          @apply font-primary font-[300];
+          font-size: calc(1.8rem * var(--scale));
+          padding-top: 0;
+          padding-bottom: 0;
+          line-height: 160%;
+        }
+      }
+      &-footer {
+        padding: calc(1rem * var(--scale)) 0;
+        &-btn {
+          @apply font-primary text-primary font-[400] relative;
+          display: inline-block;
+          vertical-align: middle;
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          position: relative;
+          padding-top: calc(0.8rem * var(--scale));
+          padding-bottom: calc(1rem * var(--scale));
+          font-size: calc(1.9rem * var(--scale));
+          &::after {
+            content: "";
+            width: 1.2rem;
+            height: 1.3rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 45%;
+            margin-left: calc(0.5rem * var(--scale));
+            transform: translateY(-50%);
+            position: absolute;
+            background-image: url("/images/icon-arrow.png");
+          }
+        }
+      }
+    }
+  }
+}

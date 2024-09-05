@@ -1,0 +1,56 @@
+.sectionTitle {
+  @apply text-center relative max-w-[35rem] w-full mb-14 mx-auto leading-[3rem];
+  z-index: 40;
+  & > h3 {
+    @apply font-primary lowercase relative text-primary font-[700];
+
+    &::first-letter {
+      @apply uppercase;
+    }
+  }
+
+  & > h2 {
+    @apply text-black text-[2.6rem] font-[700] font-primary;
+    &::first-letter {
+      @apply uppercase;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 7.6rem;
+      background: linear-gradient(90deg, #509415 50%, #093f51 50%);
+      bottom: -1.5rem;
+      height: 0.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+    }
+  }
+  @screen tablet {
+    &-title {
+      @apply max-w-[200rem] w-[100%];
+    }
+  }
+
+  @screen laptop {
+    line-height: calc(3.5rem * var(--scale));
+    max-width: calc(70rem * var(--scale));
+    h3 {
+      @apply font-primary;
+      font-size: calc(2.18rem * var(--scale));
+    }
+
+    h2 {
+      @apply font-[700] mx-auto w-full;
+      font-size: calc(3.6rem * var(--scale));
+
+      line-height: calc(4.5rem * var(--scale));
+
+      &::before {
+        bottom: calc(-2.5rem * var(--scale));
+        width: calc(11rem * var(--scale));
+        height: calc(0.5rem * var(--scale));
+      }
+    }
+  }
+}

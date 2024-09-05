@@ -1,0 +1,175 @@
+.homeBanner {
+  @apply relative flex justify-center  max-h-screen overflow-hidden;
+
+  height: 94vh;
+  z-index: 1;
+  &-video {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+    z-index: -1;
+  }
+  &::before {
+    @apply bg-primary absolute mix-blend-multiply;
+    content: "";
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 80rem;
+    width: 100%;
+    clip-path: polygon(2% 0, 98% 0, 98% 60%, 2% 40%);
+  }
+  &::after {
+    @apply bg-white absolute;
+    background-image: url("/images/bg-texture-gris.jpg");
+    content: "";
+    z-index: 10;
+    bottom: -1rem;
+    left: 0;
+    height: 76rem;
+    width: 101%;
+    clip-path: polygon(0 93%, 100% 70%, 100% 100%, 0% 100%);
+  }
+
+  &__container {
+    @apply text-center font-primary text-white flex items-center flex-col mt-40;
+    z-index: 20;
+
+    &-subtitle {
+      @apply uppercase text-center font-[400] text-[1.065rem] relative;
+
+      &::before {
+        @apply bg-secundary;
+        content: "";
+        width: 104%;
+        height: 120%;
+        left: -2%;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+    &-pre_title {
+      @apply text-white text-[1.76rem] mt-[1.763rem];
+    }
+    &-title {
+      @apply text-white font-[700] leading-[3.5rem] font-primary text-[2.457rem];
+      text-shadow: 1.9310344457626343px 1.9310344457626343px 0px 0px
+        rgba(0, 0, 0, 0.12);
+    }
+    &-buttons {
+      @apply flex gap-5 mt-[1.21rem];
+      &-btn {
+        @apply bg-white text-primary pointer-events-auto;
+      }
+    }
+    &-skills {
+      @apply absolute bottom-0 flex flex-col h-[18rem] mb-12 w-[90%] mx-auto max-w-[80rem] justify-evenly items-end;
+
+      & > div:nth-child(2) {
+        @apply mx-auto mb-4;
+      }
+      & > div:nth-child(3) {
+        @apply mr-auto;
+      }
+    }
+  }
+
+  @screen tablet {
+    @apply overflow-visible;
+    &::after {
+      bottom: -0.5rem;
+    }
+    &__container {
+      @apply pointer-events-none;
+      &-skills {
+        @apply absolute bottom-0 flex flex-col h-[18rem] mb-10  max-w-[60rem];
+        & > div:nth-child(2) {
+          @apply mx-auto mb-7 translate-x-6;
+        }
+        & > div:nth-child(3) {
+          @apply mr-auto;
+        }
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply relative  min-h-[105vh] overflow-hidden;
+    margin-top: calc(-10rem * var(--scale));
+    &-video {
+      @apply absolute top-0 left-0 w-full h-full object-cover;
+    }
+    &::before {
+      @apply bg-primary absolute mix-blend-multiply;
+      content: "";
+      z-index: 10;
+      top: 0;
+
+      height: 110vh;
+      width: 100%;
+      clip-path: polygon(0 0, 42% 0, 64% 100%, 0% 100%);
+    }
+    &::after {
+      @apply bg-white absolute;
+      content: "";
+      z-index: 10;
+      bottom: calc(-0.05rem * var(--scale));
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      clip-path: polygon(100% 68%%, 0% 100%, 100% 100%);
+    }
+
+    &__container {
+      @apply items-start mx-auto;
+      margin-top: calc(27.5rem * var(--scale));
+      width: calc(148rem * var(--scale));
+      &-subtitle {
+        @apply text-white uppercase relative w-fit;
+        font-size: calc(1.829rem * var(--scale));
+        margin-left: 0.8%;
+        letter-spacing: calc(0.09rem * var(--scale));
+        &::before {
+          @apply bg-secundary;
+          content: "";
+          width: 106%;
+          height: calc(4rem * var(--scale));
+          left: -3%;
+          bottom: calc(-0.1rem * var(--scale));
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      &-pre_title {
+        @apply text-white text-left font-[400];
+        font-size: calc(3rem * var(--scale));
+        margin-top: calc(2.5rem * var(--scale));
+      }
+      &-title {
+        @apply text-white text-left w-1/2;
+        font-size: calc(6rem * var(--scale));
+        line-height: 134.023%;
+        text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      &-buttons {
+        margin-top: calc(1.8rem * var(--scale));
+      }
+
+      &-skills {
+        @apply mb-12 max-w-[80rem]  flex-row-reverse absolute mx-0 ml-auto justify-end items-start;
+
+        height: calc(14rem * var(--scale));
+        width: calc(90rem * var(--scale));
+        right: calc(20rem * var(--scale));
+        bottom: calc(10rem * var(--scale));
+        & > div:nth-child(2) {
+          margin-top: calc(4rem * var(--scale));
+          @apply mb-0 translate-x-0;
+        }
+        & > div:nth-child(3) {
+          @apply mt-auto;
+        }
+      }
+    }
+  }
+}

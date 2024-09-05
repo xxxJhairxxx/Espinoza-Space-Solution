@@ -1,0 +1,79 @@
+.Footer {
+  @apply bg-black text-white py-10 px-[2.3rem] text-[1.4rem] font-[300] font-primary;
+
+  white-space: nowrap;
+  i {
+    @apply text-white mr-[2%] text-[1.6rem];
+  }
+
+  &-ctn {
+    @apply pt-7;
+    & > ul {
+      @apply font-primary;
+
+      a {
+        @apply block mb-4;
+      }
+      & li {
+        @apply text-[300]  m-0 p-0;
+      }
+      & li:last-child {
+        @apply p-0 m-0;
+        i {
+          @apply text-[2rem];
+        }
+      }
+    }
+    &-social {
+      @apply justify-start;
+    }
+  }
+}
+
+@screen tablet {
+  .Footer {
+    @apply p-10;
+
+    i {
+      @apply text-white text-[1.7rem];
+    }
+    ul {
+      @apply justify-between;
+
+      li {
+        @apply text-white text-[1.3rem] mx-auto;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@screen laptop {
+  .Footer {
+    @apply items-center;
+    padding: calc(6.6rem * var(--scale));
+    padding-bottom: calc(5rem * var(--scale));
+
+    &-ctn {
+      @apply flex items-end justify-center p-0;
+      ul {
+        @apply flex flex-nowrap items-center justify-center gap-[4rem];
+        a {
+          @apply flex items-start;
+          gap: calc(0.8rem * var(--scale));
+        }
+        li {
+          @apply mx-0 flex flex-nowrap items-center font-[300] font-primary m-0  gap-5;
+          font-size: calc(1.6rem * var(--scale));
+          i {
+            font-size: calc(2rem * var(--scale));
+          }
+
+          .socials__item-link-icon {
+            font-size: calc(2.5rem * var(--scale)) !important;
+          }
+        }
+      }
+    }
+  }
+}

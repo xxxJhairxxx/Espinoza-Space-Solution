@@ -1,0 +1,7 @@
+.logoCont {
+  @apply cursor-pointer;
+  width: calc(20rem * var(--scale));
+  img {
+    height: auto;
+  }
+}

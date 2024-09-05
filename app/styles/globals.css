@@ -1,0 +1,57 @@
+/*CREAMOS ESTA ESTRUCTURA DE CARPETAS*/
+@import "container.css";
+@import "icons.css";
+@import "scale.css";
+@import "./atoms";
+@import "./molecules";
+@import "./organisms";
+@import "./ui";
+@import "fonts.css";
+
+/*ESTILOS PARA CONTENEDOR (COPY)*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*fuentes DESCARGADAS*/
+:root {
+  --font-axiforma: Axiforma;
+}
+/*fuentes DESCARGADAS*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @apply font-primary font-[300];
+  font-size: 1.5rem;
+  @media screen(laptop) {
+    font-size: max(1.4rem, calc(1.49rem * var(--scale)));
+  }
+
+  &.no-scroll {
+    @apply overflow-hidden;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.main-page {
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+  background-image: var(--bg-img);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

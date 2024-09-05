@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_section_home_chooses",
+  "info": {
+    "displayName": "home_choose",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image_person": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "choose_card": {
+      "displayName": "choose_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "cards-section.choose-card"
+    }
+  }
+}

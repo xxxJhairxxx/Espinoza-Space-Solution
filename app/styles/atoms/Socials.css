@@ -1,0 +1,20 @@
+.socials {
+  @apply flex gap-[1.5rem] text-white;
+
+  &__item {
+    @apply text-[2.5rem];
+  }
+
+  @screen laptop {
+    @apply flex items-center;
+    gap: calc(1.3rem * var(--scale));
+    &__item {
+      @apply w-[100%] h-fit flex;
+      &-link {
+        i {
+          font-size: calc(2.3rem * var(--scale));
+        }
+      }
+    }
+  }
+}

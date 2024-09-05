@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home_banner": {
+      "displayName": "home_banner",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-banner"
+    },
+    "home_we_do": {
+      "displayName": "home_we_do",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-we-do"
+    },
+    "home_manufactures": {
+      "displayName": "home_manufactures",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-manufactures"
+    },
+    "home_services": {
+      "displayName": "home_services",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-services"
+    },
+    "home_middle": {
+      "displayName": "home_middle",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-middle"
+    },
+    "home_choose": {
+      "displayName": "home_choose",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-choose"
+    },
+    "home_projects": {
+      "displayName": "home_projects",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-projects"
+    },
+    "home_about": {
+      "displayName": "home_about",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-about"
+    },
+    "home_blog": {
+      "displayName": "home_blog",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-blog"
+    },
+    "home_map": {
+      "displayName": "home_map",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-section.home-map"
+    },
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
